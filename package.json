@@ -7,7 +7,8 @@
     "build": "vue-tsc --noEmit && vite build",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s --commit-path .",
     "preview": "vite preview",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "prepack": "npm run changelog"
   },
   "dependencies": {
     "vue3-datepicker": "^0.4.0"
@@ -29,5 +30,10 @@
   },
   "main": "dist/index.js",
   "module": "dist/index.js",
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ]
 }
